@@ -6,7 +6,7 @@
 /*   By: namoussa <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 21:16:42 by namoussa          #+#    #+#             */
-/*   Updated: 2024/05/14 21:16:43 by namoussa         ###   ########.fr       */
+/*   Updated: 2024/08/19 14:40:10 by namoussa         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 
 int	one_philo(t_programme *prog)
 {
-	if(prog->input.nbr_philo == 0)
-	{
-		printf("0 1 %s\n", DIED);
-		return (-1);
-	}
 	prog->time0 = get_current_time();
 	printf("%lld 1 %s \n", (get_current_time() - prog->time0), FORK);
 	ft_usleep(prog->input.time_to_die);
