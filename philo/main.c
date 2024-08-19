@@ -14,6 +14,11 @@
 
 int	one_philo(t_programme *prog)
 {
+	if(prog->input.nbr_philo == 0)
+	{
+		printf("0 1 %s\n", DIED);
+		return (-1);
+	}
 	prog->time0 = get_current_time();
 	printf("%lld 1 %s \n", (get_current_time() - prog->time0), FORK);
 	ft_usleep(prog->input.time_to_die);
